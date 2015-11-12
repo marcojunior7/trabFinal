@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cursoApp" ng-controller="cursoCtrl">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Listagem de Carros</title>
+        <script src="cordova.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src *;">
+        <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        
+    </head>
+    
+    <body >
+    
+        <ion-pane>
+        
+            
+        
+            <ion-content>
+                 <ion-list>
+                    <ion-item ng-repeat="result in cursos">
+                        <div class="row">
+                            <div class="col"> <b>ID Curso:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> {{result.idCurso}}<br/>
+                                <b>Nome Curso:</b> {{result.nomeCurso}}<br/></div>
+                            <div class="col">
+                                <ion-button class="button" ng-click="" >Editar</ion-option-button></div>
+                            <div class="col"><ion-button class="button" ng-click="">Excluir</ion-option-button>
+                            </div>
+                        </div>
+                    </ion-item>
+                  </ion-list>
+                
+                <label class="item item-input">
+                    <b>ID Curso:</b> <input type="text" ng-model="item.idCurso">
+                  </label>
+                  <label class="item item-input">
+                      <b>Curso:</b> <input type="text" ng-model="item.nomeCurso">
+                  </label>
+                <button class="button button-block" ng-click="addCurso(item.idCruso,item.nomeCurso)">Inserir</button>
+                
+               
+                </ion-content>
+        </ion-pane>
+    </body>
+
+</html>
